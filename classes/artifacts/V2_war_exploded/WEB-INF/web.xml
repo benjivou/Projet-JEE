@@ -35,12 +35,12 @@
 	
 	<context-param>
 		<param-name>JDBC_LOGIN</param-name>
-		<param-value>root</param-value>
+		<param-value>tomcat</param-value>
 	</context-param>
 	
 	<context-param>
 		<param-name>JDBC_PASSWORD</param-name>
-		<param-value></param-value>
+		<param-value>tomcat</param-value>
 	</context-param>
 	
 </web-app>

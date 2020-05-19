@@ -8,6 +8,8 @@
     <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
     <mapping class="com.exemple.bdd.CommentaireEntity"/>
     <mapping class="com.exemple.bdd.UtilisateurEntity"/>
+    <mapping resource="CommentaireEntity.hbm.xml"/>
+    <mapping resource="UtilisateurEntity.hbm.xml"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

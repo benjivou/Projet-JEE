@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.exemple.bdd.DAOContext;
+import com.exemple.bdd.HibernateUtil;
+import com.exemple.bdd.UtilisateurORM;
 import com.exemple.beans.Utilisateur;
 import com.exemple.forms.ConnexionForm;
 
@@ -29,6 +31,14 @@ public class Connexion extends HttpServlet {
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         /* Affichage de la page de connexion */
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+
+
+        UtilisateurORM uORM= new UtilisateurORM();
+        uORM.createAndStoreEvent(
+                "toto@gmail.com",
+                "toto",
+                "toto",
+                "toto");
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response )

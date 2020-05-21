@@ -26,7 +26,7 @@ public class UtilisateurORM {
         com.setMotDePasse(motDePasse);
         com.setNom(nom);
         com.setPrenom(prenom);
-      
+
         com.setDateInscription(new Timestamp(new Date().getTime()));
 
         session.save(com);

@@ -6,8 +6,9 @@
 <head>
     <meta charset="utf-8"/>
     <title>Connexion</title>
-    <link type="text/css" rel="stylesheet"
-          href="inc/form.css"/>
+    <style>
+        <%@ include file="../inc/form.css"%>
+    </style>
 </head>
 <body>
 <fieldset>

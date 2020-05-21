@@ -33,12 +33,7 @@ public class Connexion extends HttpServlet {
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 
 
-        UtilisateurORM uORM= new UtilisateurORM();
-        uORM.createAndStoreEvent(
-                "toto@gmail.com",
-                "toto",
-                "toto",
-                "toto");
+
     }
 
     public void doPost( HttpServletRequest request, HttpServletResponse response )
@@ -85,5 +80,5 @@ public class Connexion extends HttpServlet {
             this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
 
         }
-         }
+    }
 }

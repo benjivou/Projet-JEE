@@ -13,6 +13,6 @@ public class Redirect extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 
-        response.sendRedirect(request.getContextPath()+"/connexion"); // Redirection vers la bonne page
+        response.sendRedirect(request.getContextPath()+"/accueil"); // Redirection vers la bonne page
     }
 }

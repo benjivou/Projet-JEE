@@ -42,3 +42,7 @@ form .erreur {
 form .succes {
     color: #090;
 }
+.item_text:hover{
+    text-decoration-color: #ffc107;
+    font-weight: bold;
+}

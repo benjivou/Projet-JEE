@@ -21,45 +21,92 @@
 
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <div class="container align-content-center">
+        <div class="col item_inner logo">
 
-            <div class="col item_inner">
+            PandaTech'
+        </div>
+        <div class="col item_inner">
+            <a href="accueil">
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
                 <span class="item_text">Home</span>
-            </div>
-            <div class="item_inner col">
-                        <span class="menu_icon_wrapper">
-                            <i class="menu_icon blank fa"></i>
-                        </span>
+            </a>
+        </div>
+
+        <div class="item_inner col">
+            <a href="livre">
+                <span class="menu_icon_wrapper">
+                    <i class="menu_icon blank fa"></i>
+                </span>
                 <span class="item_text">Livre d'or</span>
-            </div>
-            <div class="item_inner col">
+            </a>
+        </div>
+        <div class="item_inner col">
+            <a href="inscription">
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
                 <span class="item_text">S'inscrire</span>
-            </div>
-            <div class="item_inner col">
+            </a>
+        </div>
+        <div class="item_inner col">
+            <a href="message">
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
                 <span class="item_text">Laisser un message</span>
-            </div>
-            <div class="item_inner col">
+            </a>
+        </div>
+        <div class="item_inner col">
+            <a href="contact">
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
                 <span class="item_text">Nous contacter</span>
-            </div>
+            </a>
+        </div>
 
     </div>
 
 
 </nav>
+
+<main role="main" class="container">
+    <h1 class="text-center ">Panda Tech'</h1>
+    <p class="lead mt-3">Bienvenue sur notre site web, nous sommes une association locale de passionné d'informatique,
+        électronique, domotique,... et pleins de mots qui finissent en -ique, qui adoront partager nos
+        connaissances.
+        <br>
+        L'industrie de l'électronique est un industrie extrêmement polluant, qui consomme énormémement d'énergie et
+        de ressource,
+        et sans connaissances des utilisateurs il est difficile d'éviter le gaspillages de ressources lors de
+        l'utilisation des produits issus de cet industrie.
+        <br>
+        C'est pour éviter ce gaspillage que nous avons monter cette association, le but est d'aider à réparer et
+        d'informer les utilisateurs sur les moyens de faire des économies et de conseillers les achats.
+        Le tout dans un environnement conviviale, au sein de nos nombreux événements.
+        <br>
+        Nous avons à se jour organiser de nombreux événement pour réparer vos vieux téléphones,
+        des ateliers de sensibilisations.
+        <br>
+        Le club Pandatech n'attends plus que vous...</p>
+
+</main>
+
+
+<footer class="footer align-content-center fixed-bottom">
+    <div class="container ">
+
+        <div class="text-muted">Pandatech'© 2020</div>
+
+
+    </div>
+</footer>
 
 </body>
 </html>

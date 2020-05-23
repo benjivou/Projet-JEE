@@ -19,6 +19,7 @@
     </script>
 </head>
 <body>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <div class="container align-content-center ">
@@ -56,7 +57,7 @@
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
-                <span class="item_text">Laisser un message</span>
+                <span class="item_text">Messages</span>
             </a>
         </div>
 

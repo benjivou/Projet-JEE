@@ -1,12 +1,12 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: benji
-  Date: 23/05/2020
-  Time: 12:23
-  To change this template use File | Settings | File Templates.
---%>
+        Created by IntelliJ IDEA.
+        User: benji
+        Date: 23/05/2020
+        Time: 12:23
+        To change this template use File | Settings | File Templates.
+        --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -27,8 +27,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <div class="container align-items-center ">
-        <div class="col item_inner logo text-center">
+    <div class="container align-content-center ">
+        <div class="col item_inner logo">
 
             PandaTech'
         </div>
@@ -62,7 +62,7 @@
                         <span class="menu_icon_wrapper">
                             <i class="menu_icon blank fa"></i>
                         </span>
-                <span class="item_text">Laisser un message</span>
+                <span class="item_text">Messages</span>
             </a>
         </div>
 
@@ -74,7 +74,10 @@
 
 <div class=" main container ">
 
-
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
 
 </div>
 

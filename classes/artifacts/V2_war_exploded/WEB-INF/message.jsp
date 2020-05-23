@@ -1,11 +1,17 @@
-<%@ page pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
-           prefix="c" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: benji
+  Date: 23/05/2020
+  Time: 12:23
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Accueil</title>
+    <title>Livre d'or</title>
+    <link type="text/css" rel="stylesheet" href="inc/form.css"/>
     <style>
         <%@ include file="../inc/form.css"%>
         <%@include file="../inc/bootstrap-4.5.0-dist/css/bootstrap.css" %>
@@ -17,11 +23,8 @@
     <script>
         <%@ include file="../inc/bootstrap-4.5.0-dist/js/bootstrap.js"%>
     </script>
-
-
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
     <div class="container align-content-center ">
@@ -69,28 +72,11 @@
 
 </nav>
 
-<main role="main" class="container">
-    <h1 class="text-center ">Panda Tech'</h1>
-    <p class="lead mt-3">Bienvenue sur notre site web, nous sommes une association locale de passionné d'informatique,
-        électronique, domotique,... et pleins de mots qui finissent en -ique, qui adoront partager nos
-        connaissances.
-        <br>
-        L'industrie de l'électronique est un industrie extrêmement polluant, qui consomme énormémement d'énergie et
-        de ressource,
-        et sans connaissances des utilisateurs il est difficile d'éviter le gaspillages de ressources lors de
-        l'utilisation des produits issus de cet industrie.
-        <br>
-        C'est pour éviter ce gaspillage que nous avons monter cette association, le but est d'aider à réparer et
-        d'informer les utilisateurs sur les moyens de faire des économies et de conseillers les achats.
-        Le tout dans un environnement conviviale, au sein de nos nombreux événements.
-        <br>
-        Nous avons à se jour organiser de nombreux événement pour réparer vos vieux téléphones,
-        des ateliers de sensibilisations.
-        <br>
-        Le club Pandatech n'attends plus que vous...</p>
+<div class=" main container ">
 
-</main>
+    <h1>Nos commentaires :</h1>
 
+</div>
 
 <footer class="footer align-content-center fixed-bottom">
     <div class="container ">
@@ -100,6 +86,5 @@
 
     </div>
 </footer>
-
 </body>
 </html>

@@ -19,53 +19,37 @@
     </script>
 </head>
 <body>
-<div class="container">
-    <fieldset >
-        <form method="post" action="connexion">
+<div class=" main container ">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+            <form class="form-example" action="" method="post" >
+                <h1 class="text-center">Connexion</h1>
+                <p class="description">Merci pour votre retour sur votre expérience </p>
+                <!-- Input fields -->
+                <div class="form-group form-inline ">
+                    <label for="email" class="col">Email :</label>
+                    <input type="text" class="form-control username" id="email" placeholder="email..." name="email" >
 
-            <legend>Connexion</legend>
-            <p>Vous pouvez nous connecter via ce
-                formulaire.</p>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="mot de passe" class="col">Mot de passe:</label>
+                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                </div>
 
-            <label for="nom">Adresse email <span
-                    class="requis">*</span></label>
-            <input type="email" id="email"
-                   name="email"
-                   value="<c:out value="${utilisateur.email}"/>"
-                   size="20" maxlength="60"/>
-            <span class="erreur">${form.erreurs['email']}</span>
-            <br/>
+                <div class="container text-center ">
 
-            <label for="motdepasse">Mot de passe <span
-                    class="requis">*</span></label>
-            <input type="password" id="motdepasse"
-                   name="motdepasse" value=""
-                   size="20" maxlength="20"/>
-            <span class="erreur">${form.erreurs['motdepasse']}</span>
-            <br/>
+                <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Connexion</button>
 
-            <input type="submit" value="Connexion"
-                   class="sansLabel"/>
+                </div>
 
-
-
-            <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
-            <%-- Vérification de la présence d'un objet utilisateur en session --%>
-            <c:if test="${!empty sessionScope.sessionUtilisateur}">
-                <%-- Si l'utilisateur existe en session, alors on affiche son adresse email. --%>
-                <p class="succes">Vous êtes
-                    connecté(e) avec l'adresse
-                    : ${sessionScope.sessionUtilisateur.email}</p>
-            </c:if>
+            </form>
+            <!-- Form end -->
+        </div>
+    </div>
 
 
-        </form>
-        <form method="get"
-              action="inscription">
-            <input type="submit" value="S'incrire"
-                   class="sansLabel"/>
-        </form>
-    </fieldset>
 </div>
+
 </body>
 </html>

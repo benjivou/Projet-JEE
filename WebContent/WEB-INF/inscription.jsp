@@ -37,7 +37,7 @@
         </div>
 
         <div class="item_inner col">
-            <a href="livre">
+            <a href="connexion">
                 <span class="menu_icon_wrapper">
                     <i class="menu_icon blank fa"></i>
                 </span>
@@ -76,21 +76,21 @@
                 <p class="description">Vous étes à 2 cliques de nous rejoindre</p>
                 <!-- Input fields -->
                 <div class="form-group form-inline ">
-                    <label for="username" class="col">Email :</label>
-                    <input type="text" class="form-control username" id="username" placeholder="Username..." name="username" >
+                    <label for="email" class="col">Email :</label>
+                    <input type="text" class="form-control username" id="email" placeholder="email..." name="email" >
 
                 </div>
                 <div class="form-group form-inline">
-                    <label for="password" class="col">Mot de passe:</label>
-                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
+                    <label for="mot de passe" class="col">Mot de passe:</label>
+                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
                 </div>
                 <div class="form-group form-inline">
-                    <label for="password" class="col">Copie mot de passe:</label>
-                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
+                    <label for="mot de passe" class="col">Copie mot de passe:</label>
+                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
                 </div>
                 <div class="form-group form-inline">
                     <label for="nom" class="col">Nom:</label>
-                    <input type="text" class="form-control password" id="nom" placeholder="Nom..." name="nom" >
+                    <input type="text" class="form-control mot de passe" id="nom" placeholder="Nom..." name="nom" >
                 </div>
 
                     <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-2">Login</button>

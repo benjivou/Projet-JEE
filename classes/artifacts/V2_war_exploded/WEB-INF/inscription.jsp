@@ -21,8 +21,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <div class="container align-items-center ">
-        <div class="col item_inner logo text-center">
+    <div class="container align-content-center ">
+        <div class="col item_inner logo">
 
             PandaTech'
         </div>

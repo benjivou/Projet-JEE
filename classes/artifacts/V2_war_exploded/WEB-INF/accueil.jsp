@@ -5,7 +5,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Connexion</title>
+    <title>Accueil</title>
     <style>
         <%@ include file="../inc/form.css"%>
         <%@include file="../inc/bootstrap-4.5.0-dist/css/bootstrap.css" %>

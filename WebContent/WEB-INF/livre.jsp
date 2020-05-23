@@ -1,10 +1,16 @@
-<%@ page pageEncoding="UTF-8" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: benji
+  Date: 23/05/2020
+  Time: 12:23
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Inscription</title>
+    <title>Livre d'or</title>
     <link type="text/css" rel="stylesheet" href="inc/form.css"/>
     <style>
         <%@ include file="../inc/form.css"%>
@@ -21,8 +27,8 @@
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <div class="container align-content-center ">
-        <div class="col item_inner logo">
+    <div class="container align-items-center ">
+        <div class="col item_inner logo text-center">
 
             PandaTech'
         </div>
@@ -67,37 +73,7 @@
 </nav>
 
 <div class=" main container ">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-10 col-md-8 col-lg-6">
-            <!-- Form -->
-            <form class="form-example" action="" method="post" >
-                <h1 class="text-center">S'inscrire</h1>
-                <p class="description">Vous étes à 2 cliques de nous rejoindre</p>
-                <!-- Input fields -->
-                <div class="form-group form-inline ">
-                    <label for="username" class="col">Email :</label>
-                    <input type="text" class="form-control username" id="username" placeholder="Username..." name="username" >
 
-                </div>
-                <div class="form-group form-inline">
-                    <label for="password" class="col">Mot de passe:</label>
-                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
-                </div>
-                <div class="form-group form-inline">
-                    <label for="password" class="col">Copie mot de passe:</label>
-                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
-                </div>
-                <div class="form-group form-inline">
-                    <label for="nom" class="col">Nom:</label>
-                    <input type="text" class="form-control password" id="nom" placeholder="Nom..." name="nom" >
-                </div>
-                <button type="submit" class="btn btn-primary btn-customized align-items-center col">Login</button>
-
-
-            </form>
-            <!-- Form end -->
-        </div>
-    </div>
 
 
 </div>

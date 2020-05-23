@@ -20,7 +20,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 
     <div class="container align-content-center ">
         <div class="col item_inner logo">
@@ -92,7 +92,8 @@
                     <label for="nom" class="col">Nom:</label>
                     <input type="text" class="form-control password" id="nom" placeholder="Nom..." name="nom" >
                 </div>
-                <button type="submit" class="btn btn-primary btn-customized align-items-center col">Login</button>
+
+                    <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-2">Login</button>
 
 
             </form>

@@ -25,7 +25,7 @@
     </script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 
     <div class="container align-content-center ">
         <div class="col item_inner logo">
@@ -74,10 +74,16 @@
 
 <div class=" main container ">
 
-    <div class="form-group">
-        <label for="exampleFormControlTextarea1">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    <div class="form-group align-items-center text-center">
+
+
+        <label for="exampleFormControlTextarea1"><h1 for="exampleFormControlTextarea1">Laisser votre message sur notre livre d'or</h1>
+        </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+
+        <button type="button" class="btn btn-primary btn-block btn-radius">Je laisse mon message</button>
     </div>
+
 
 </div>
 

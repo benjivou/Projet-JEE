@@ -4,7 +4,7 @@ html{
     width: 100%;
 }
 body, p, legend, label, input {
-    font: normal 8pt verdana, helvetica, sans-serif;
+
     text-align: center;
 
 }
@@ -21,7 +21,9 @@ form {
 
 
 
-
+button{
+    margin-top: 20px;
+}
 form .erreur {
     color: #900;
 }
@@ -37,6 +39,9 @@ form .succes {
     font-weight: bolder;
     font-style: italic;
     font-size: large;
+}
+button{
+    margin: 5px;
 }
 main, .main{
     padding: 60px;

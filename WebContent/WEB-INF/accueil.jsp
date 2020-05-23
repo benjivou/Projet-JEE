@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
 
     <div class="container align-content-center ">
         <div class="col item_inner logo">
@@ -92,7 +92,7 @@
 </main>
 
 
-<footer class="footer align-content-center fixed-bottom">
+<footer class="footer align-content-center fixed-bottom ">
     <div class="container ">
 
         <div class="text-muted">Pandatech'© 2020</div>

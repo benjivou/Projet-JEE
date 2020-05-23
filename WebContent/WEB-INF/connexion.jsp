@@ -8,54 +8,64 @@
     <title>Connexion</title>
     <style>
         <%@ include file="../inc/form.css"%>
+        <%@include file="../inc/bootstrap-4.5.0-dist/css/bootstrap.css" %>
+
     </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script>
+        <%@ include file="../inc/bootstrap-4.5.0-dist/js/bootstrap.js"%>
+    </script>
 </head>
 <body>
-<fieldset>
-    <form method="post" action="connexion">
+<div class="container">
+    <fieldset >
+        <form method="post" action="connexion">
 
-        <legend>Connexion</legend>
-        <p>Vous pouvez nous connecter via ce
-            formulaire.</p>
+            <legend>Connexion</legend>
+            <p>Vous pouvez nous connecter via ce
+                formulaire.</p>
 
-        <label for="nom">Adresse email <span
-                class="requis">*</span></label>
-        <input type="email" id="email"
-               name="email"
-               value="<c:out value="${utilisateur.email}"/>"
-               size="20" maxlength="60"/>
-        <span class="erreur">${form.erreurs['email']}</span>
-        <br/>
+            <label for="nom">Adresse email <span
+                    class="requis">*</span></label>
+            <input type="email" id="email"
+                   name="email"
+                   value="<c:out value="${utilisateur.email}"/>"
+                   size="20" maxlength="60"/>
+            <span class="erreur">${form.erreurs['email']}</span>
+            <br/>
 
-        <label for="motdepasse">Mot de passe <span
-                class="requis">*</span></label>
-        <input type="password" id="motdepasse"
-               name="motdepasse" value=""
-               size="20" maxlength="20"/>
-        <span class="erreur">${form.erreurs['motdepasse']}</span>
-        <br/>
+            <label for="motdepasse">Mot de passe <span
+                    class="requis">*</span></label>
+            <input type="password" id="motdepasse"
+                   name="motdepasse" value=""
+                   size="20" maxlength="20"/>
+            <span class="erreur">${form.erreurs['motdepasse']}</span>
+            <br/>
 
-        <input type="submit" value="Connexion"
-               class="sansLabel"/>
-
-
-
-        <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
-        <%-- Vérification de la présence d'un objet utilisateur en session --%>
-        <c:if test="${!empty sessionScope.sessionUtilisateur}">
-            <%-- Si l'utilisateur existe en session, alors on affiche son adresse email. --%>
-            <p class="succes">Vous êtes
-                connecté(e) avec l'adresse
-                : ${sessionScope.sessionUtilisateur.email}</p>
-        </c:if>
+            <input type="submit" value="Connexion"
+                   class="sansLabel"/>
 
 
-    </form>
-    <form method="get"
-          action="inscription">
-        <input type="submit" value="S'incrire"
-               class="sansLabel"/>
-    </form>
-</fieldset>
+
+            <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
+            <%-- Vérification de la présence d'un objet utilisateur en session --%>
+            <c:if test="${!empty sessionScope.sessionUtilisateur}">
+                <%-- Si l'utilisateur existe en session, alors on affiche son adresse email. --%>
+                <p class="succes">Vous êtes
+                    connecté(e) avec l'adresse
+                    : ${sessionScope.sessionUtilisateur.email}</p>
+            </c:if>
+
+
+        </form>
+        <form method="get"
+              action="inscription">
+            <input type="submit" value="S'incrire"
+                   class="sansLabel"/>
+        </form>
+    </fieldset>
+</div>
 </body>
 </html>

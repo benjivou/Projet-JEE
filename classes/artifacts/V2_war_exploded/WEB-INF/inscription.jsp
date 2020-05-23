@@ -2,47 +2,113 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Inscription</title>
-        <link type="text/css" rel="stylesheet" href="inc/form.css" />
-    </head>
-    <body>
-        <form method="post" action="inscription">
-            <fieldset>
-                <legend>Inscription</legend>
-                <p>Vous pouvez vous inscrire via ce formulaire.</p>
+<head>
+    <meta charset="utf-8"/>
+    <title>Inscription</title>
+    <link type="text/css" rel="stylesheet" href="inc/form.css"/>
+    <style>
+        <%@ include file="../inc/form.css"%>
+        <%@include file="../inc/bootstrap-4.5.0-dist/css/bootstrap.css" %>
 
-                <label for="email">Adresse email <span class="requis">*</span></label>
-                <input type="email" id="email" name="email" value="<c:out value="${utilisateur.email}"/>" size="20" maxlength="60" />
-                <span class="erreur">${form.erreurs['email']}</span>
-                <br />
+    </style>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script>
+        <%@ include file="../inc/bootstrap-4.5.0-dist/js/bootstrap.js"%>
+    </script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-                <label for="motdepasse">Mot de passe <span class="requis">*</span></label>
-                <input type="password" id="motdepasse" name="motdepasse" value="" size="20" maxlength="20" />
-                <span class="erreur">${form.erreurs['motdepasse']}</span>
-                <br />
+    <div class="container align-items-center ">
+        <div class="col item_inner logo text-center">
 
-                <label for="confirmation">Confirmation du mot de passe <span class="requis">*</span></label>
-                <input type="password" id="confirmation" name="confirmation" value="" size="20" maxlength="20" />
-                <span class="erreur">${form.erreurs['confirmation']}</span>
-                <br />
+            PandaTech'
+        </div>
+        <div class="col item_inner">
+            <a href="accueil">
+                        <span class="menu_icon_wrapper">
+                            <i class="menu_icon blank fa"></i>
+                        </span>
+                <span class="item_text">Home</span>
+            </a>
+        </div>
 
-                <label for="nom">Nom d'utilisateur</label>
-                <input type="text" id="nom" name="nom" value="<c:out value="${utilisateur.nom}"/>" size="20" maxlength="20" />
-                <span class="erreur">${form.erreurs['nom']}</span>
-                <br />
+        <div class="item_inner col">
+            <a href="livre">
+                <span class="menu_icon_wrapper">
+                    <i class="menu_icon blank fa"></i>
+                </span>
+                <span class="item_text">Livre d'or</span>
+            </a>
+        </div>
+        <div class="item_inner col">
+            <a href="inscription">
+                        <span class="menu_icon_wrapper">
+                            <i class="menu_icon blank fa"></i>
+                        </span>
+                <span class="item_text">S'inscrire</span>
+            </a>
+        </div>
+        <div class="item_inner col">
+            <a href="message">
+                        <span class="menu_icon_wrapper">
+                            <i class="menu_icon blank fa"></i>
+                        </span>
+                <span class="item_text">Laisser un message</span>
+            </a>
+        </div>
 
-                <label for="isadmin">isAdmin</label>
-                <input type="checkbox" name="isadmin" value="isadmin"  />
 
-                <br />
+    </div>
 
-                <input type="submit"  value="inscription" class="sansLabel" />
-                <br />
-                
-                <p class="${empty form.erreurs ? 'succes' : 'erreur'}">${form.resultat}</p>
-            </fieldset>
-        </form>
-    </body>
+
+</nav>
+
+<div class=" main container ">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-10 col-md-8 col-lg-6">
+            <!-- Form -->
+            <form class="form-example" action="" method="post" >
+                <h1 class="text-center">S'inscrire</h1>
+                <p class="description">Vous étes à 2 cliques de nous rejoindre</p>
+                <!-- Input fields -->
+                <div class="form-group form-inline ">
+                    <label for="username" class="col">Email :</label>
+                    <input type="text" class="form-control username" id="username" placeholder="Username..." name="username" >
+
+                </div>
+                <div class="form-group form-inline">
+                    <label for="password" class="col">Mot de passe:</label>
+                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
+                </div>
+                <div class="form-group form-inline">
+                    <label for="password" class="col">Copie mot de passe:</label>
+                    <input type="password" class="form-control password" id="password" placeholder="Password..." name="password" >
+                </div>
+                <div class="form-group form-inline">
+                    <label for="nom" class="col">Nom:</label>
+                    <input type="text" class="form-control password" id="nom" placeholder="Nom..." name="nom" >
+                </div>
+                <button type="submit" class="btn btn-primary btn-customized align-items-center col">Login</button>
+
+
+            </form>
+            <!-- Form end -->
+        </div>
+    </div>
+
+
+</div>
+
+<footer class="footer align-content-center fixed-bottom">
+    <div class="container ">
+
+        <div class="text-muted">Pandatech'© 2020</div>
+
+
+    </div>
+</footer>
+</body>
 </html>

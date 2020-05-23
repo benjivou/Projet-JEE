@@ -24,7 +24,7 @@
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
 
-    <div class="container align-content-center">
+    <div class="container align-content-center ">
         <div class="col item_inner logo">
 
             PandaTech'
@@ -62,14 +62,7 @@
                 <span class="item_text">Laisser un message</span>
             </a>
         </div>
-        <div class="item_inner col">
-            <a href="contact">
-                        <span class="menu_icon_wrapper">
-                            <i class="menu_icon blank fa"></i>
-                        </span>
-                <span class="item_text">Nous contacter</span>
-            </a>
-        </div>
+
 
     </div>
 

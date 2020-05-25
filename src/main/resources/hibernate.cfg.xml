@@ -9,10 +9,10 @@
         <property name="connection.username">tomcat</property>
         <property name="connection.password">tomcat</property>
         <property name="hibernate.current_session_context_class">thread</property>
-        <mapping class="com.exemple.bdd.CommentaireEntity"/>
+        <mapping class="com.exemple.bdd.entity.CommentaireEntity"/>
         <mapping resource="CommentaireEntity.hbm.xml"/>
         <mapping resource="UtilisateurEntity.hbm.xml"/>
-        <mapping class="com.exemple.bdd.UtilisateurEntity"/>
+        <mapping class="com.exemple.bdd.entity.UtilisateurEntity"/>
 
 
     </session-factory>

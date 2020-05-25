@@ -9,9 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.exemple.bdd.DAOContext;
+import com.exemple.bdd.dao.DAOContext;
 
-import com.exemple.bdd.UtilisateurEntity;
+import com.exemple.bdd.entity.UtilisateurEntity;
 import com.exemple.forms.InscriptionForm;
 
 @WebServlet(urlPatterns = "/inscription")

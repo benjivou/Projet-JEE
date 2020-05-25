@@ -1,4 +1,4 @@
-package com.exemple.bdd;
+package com.exemple.bdd.dao;
 
 import javax.servlet.ServletContext;
 

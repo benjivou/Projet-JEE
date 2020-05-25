@@ -37,7 +37,7 @@
         </div>
 
         <div class="item_inner col">
-            <a href="connexion">
+            <a href="livre">
                 <span class="menu_icon_wrapper">
                     <i class="menu_icon blank fa"></i>
                 </span>
@@ -78,19 +78,22 @@
                 <div class="form-group form-inline ">
                     <label for="email" class="col">Email :</label>
                     <input type="text" class="form-control username" id="email" placeholder="email..." name="email" >
-
+                    <span class="erreur col">${form.erreurs['email']}</span>
                 </div>
                 <div class="form-group form-inline">
                     <label for="mot de passe" class="col">Mot de passe:</label>
                     <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                    <span class="erreur col">${form.erreurs['motdepasse']}</span>
                 </div>
                 <div class="form-group form-inline">
                     <label for="mot de passe" class="col">Copie mot de passe:</label>
                     <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                    <span class="erreur col">${form.erreurs['verif']}</span>
                 </div>
                 <div class="form-group form-inline">
                     <label for="nom" class="col">Nom:</label>
                     <input type="text" class="form-control mot de passe" id="nom" placeholder="Nom..." name="nom" >
+                    <span class="erreur col">${form.erreurs['nom']}</span>
                 </div>
                     <div class="container text-center">
                         <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Je valide</button>

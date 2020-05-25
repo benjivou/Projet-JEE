@@ -1,4 +1,4 @@
-package com.exemple.bdd;
+package com.exemple.bdd.entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;

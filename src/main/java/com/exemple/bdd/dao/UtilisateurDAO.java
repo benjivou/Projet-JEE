@@ -1,13 +1,6 @@
-package com.exemple.bdd;
+package com.exemple.bdd.dao;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.logging.Logger;
-
-
-import com.exemple.beans.Utilisateur;
-
-import javax.naming.Context;
 
 public class UtilisateurDAO extends DAOContext {
     /**

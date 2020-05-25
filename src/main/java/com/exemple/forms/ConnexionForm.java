@@ -5,8 +5,9 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
-import com.exemple.bdd.UtilisateurDAO;
-import com.exemple.bdd.UtilisateurEntity;
+import com.exemple.bdd.dao.UtilisateurDAO;
+import com.exemple.bdd.entity.UtilisateurEntity;
+import com.exemple.bdd.orm.UtilisateurORM;
 
 
 public final class ConnexionForm {
@@ -24,6 +25,7 @@ public final class ConnexionForm {
     }
 
     public UtilisateurEntity connecterUtilisateur(HttpServletRequest request ) {
+
         /* Récupération des champs du formulaire */
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
@@ -51,6 +53,13 @@ public final class ConnexionForm {
 
         /* Initialisation du résultat global de la validation. */
         if (  erreurs.isEmpty() && UtilisateurDAO.isValidLogin( email, motDePasse ) ) {
+
+            /*
+            Récupération de l'utilisateur
+             */
+
+
+            utilisateur = UtilisateurORM.getUtilisateurByEmail(email);
             resultat = "Succès de la connexion.";
             System.out.println( utilisateur );
         } else {

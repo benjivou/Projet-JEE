@@ -39,7 +39,7 @@
         </div>
 
         <div class="item_inner col">
-            <a href="connexion">
+            <a href="livre">
                 <span class="menu_icon_wrapper">
                     <i class="menu_icon blank fa"></i>
                 </span>

@@ -1,6 +1,5 @@
 package com.exemple.forms;
 
-import java.io.IOException;
 import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
@@ -8,10 +7,9 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 
-import com.exemple.bdd.UtilisateurDAO;
-import com.exemple.bdd.UtilisateurEntity;
-import com.exemple.bdd.UtilisateurORM;
-import com.exemple.beans.Utilisateur;
+import com.exemple.bdd.dao.UtilisateurDAO;
+import com.exemple.bdd.entity.UtilisateurEntity;
+import com.exemple.bdd.orm.UtilisateurORM;
 
 public final class InscriptionForm {
     private static final String CHAMP_EMAIL = "email";

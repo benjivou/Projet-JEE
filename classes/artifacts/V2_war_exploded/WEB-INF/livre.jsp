@@ -75,13 +75,14 @@
 <div class=" main container ">
 
     <div class="form-group align-items-center text-center">
+        <form class="form-example" action="connexion" method="post" >
 
-
-        <label for="exampleFormControlTextarea1"><h1 for="exampleFormControlTextarea1">Laisser votre message sur notre livre d'or</h1>
+        <label for="exampleFormControlTextarea1"><h1 for="exampleFormControlTextarea1">Laisser votre message sur notre livre d'or ${utilisateur.nom} !</h1>
         </label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" ></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" ></textarea>
 
-        <button type="button" class="btn btn-primary btn-block btn-radius">Je laisse mon message</button>
+        <button type="submit" class="btn btn-primary btn-block btn-radius">Je laisse mon message </button>
+        </form>
     </div>
 
 

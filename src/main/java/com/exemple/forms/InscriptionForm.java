@@ -7,7 +7,10 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+
 import com.exemple.bdd.UtilisateurDAO;
+import com.exemple.bdd.UtilisateurEntity;
+import com.exemple.bdd.UtilisateurORM;
 import com.exemple.beans.Utilisateur;
 
 public final class InscriptionForm {
@@ -15,7 +18,7 @@ public final class InscriptionForm {
     private static final String CHAMP_PASS  = "motdepasse";
     private static final String CHAMP_CONF  = "confirmation";
     private static final String CHAMP_NOM   = "nom";
-    private static final String CHAMP_ADMIN = "admin";
+    private static final String CHAMP_PRENOM = "prenom";
 
     private String              resultat;
     private Map<String, String> erreurs     = new HashMap<String, String>();
@@ -28,20 +31,24 @@ public final class InscriptionForm {
         return erreurs;
     }
 
-    public Utilisateur inscrireUtilisateur( HttpServletRequest request ) throws SQLException {
+    public UtilisateurEntity inscrireUtilisateur( HttpServletRequest request ) throws SQLException {
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
         String confirmation = getValeurChamp( request, CHAMP_CONF );
         String nom = getValeurChamp( request, CHAMP_NOM );
-        String admin = getValeurChamp( request, CHAMP_ADMIN );
-        Utilisateur utilisateur = new Utilisateur();
+        String prenom = getValeurChamp(request,CHAMP_PRENOM);
 
+        UtilisateurEntity utilisateur= null;
+
+        /*
+         * Test part
+         */
         try {
             validationEmail( email );
         } catch ( Exception e ) {
             setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        utilisateur.setEmail( email );
+
 
         try {
             validationMotsDePasse( motDePasse, confirmation );
@@ -49,27 +56,31 @@ public final class InscriptionForm {
             setErreur( CHAMP_PASS, e.getMessage() );
             setErreur( CHAMP_CONF, null );
         }
-        utilisateur.setMotDePasse( motDePasse );
+
 
         try {
             validationNom( nom );
         } catch ( Exception e ) {
             setErreur( CHAMP_NOM, e.getMessage() );
         }
-        utilisateur.setNom( nom );
 
-        if ( admin == null )
-            utilisateur.setAdmin( false );
-        else
-            utilisateur.setAdmin( true );
+
+
 
         if ( erreurs.isEmpty() ) {
+
+            /*
+            creation step
+             */
             resultat = "Succès de l'inscription.";
-            UtilisateurDAO.creerUtilisateur( utilisateur );
-            System.out.println( utilisateur );
+            utilisateur =  UtilisateurORM.createAndStoreEvent(email,motDePasse,nom,prenom);
+            System.out.println( utilisateur);
+
         } else {
+
             resultat = "Échec de l'inscription.";
             throw(new SQLException(resultat));
+
         }
 
         return utilisateur;

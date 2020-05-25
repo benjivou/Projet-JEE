@@ -5,11 +5,24 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import javax.persistence.NoResultException;
 import java.util.Date;
 import java.sql.Timestamp;
 
+
+
 public class UtilisateurORM {
-    public void createAndStoreEvent(
+
+
+    /**
+     * Create a user in the Database
+     * @param email
+     * @param motDePasse
+     * @param nom
+     * @param prenom
+     * @return the user after insert
+     */
+    public static UtilisateurEntity createAndStoreEvent(
             String email,
             String motDePasse,
             String nom,
@@ -32,5 +45,15 @@ public class UtilisateurORM {
         session.save(com);
 
         session.getTransaction().commit();
+
+        return com;
     }
+
+
+
+
+
+
+
+
 }

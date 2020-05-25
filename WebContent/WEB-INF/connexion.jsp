@@ -41,7 +41,13 @@
                 </div>
                 <div class="form-group form-inline">
                     <label for="mot de passe" class="col requis">Mot de passe :</label>
-                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                    <input type="password"
+                           class="form-control password"
+                           id="motdepasse"
+                           placeholder="mot de passe..."
+                           name="motdepasse"
+                           value="<c:out value="${utilisateur.motDePasse}"/>"
+                    >
                     <span class="erreur col">${form.erreurs['motdepasse']}</span>
                 </div>
 

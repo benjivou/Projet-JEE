@@ -10,7 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.exemple.bdd.DAOContext;
-import com.exemple.beans.Utilisateur;
+
+import com.exemple.bdd.UtilisateurEntity;
 import com.exemple.forms.InscriptionForm;
 
 @WebServlet(urlPatterns = "/inscription")
@@ -38,7 +39,7 @@ public class Inscription extends HttpServlet {
          * Appel au traitement et à la validation de la requête, et récupération
          * du bean en résultant
          */
-        Utilisateur utilisateur = null;
+        UtilisateurEntity utilisateur = null;
         try {
              utilisateur = form.inscrireUtilisateur(request);
             /* Stockage du formulaire et du bean dans l'objet request */

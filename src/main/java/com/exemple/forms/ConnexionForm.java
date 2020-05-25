@@ -6,12 +6,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
 import com.exemple.bdd.UtilisateurDAO;
-import com.exemple.beans.Utilisateur;
+import com.exemple.bdd.UtilisateurEntity;
+
 
 public final class ConnexionForm {
     private static final String CHAMP_EMAIL = "email";
     private static final String CHAMP_PASS  = "motdepasse";
-
     private String              resultat;
     private Map<String, String> erreurs     = new HashMap<String, String>();
 
@@ -23,12 +23,15 @@ public final class ConnexionForm {
         return erreurs;
     }
 
-    public Utilisateur connecterUtilisateur( HttpServletRequest request ) {
+    public UtilisateurEntity connecterUtilisateur(HttpServletRequest request ) {
         /* Récupération des champs du formulaire */
         String email = getValeurChamp( request, CHAMP_EMAIL );
         String motDePasse = getValeurChamp( request, CHAMP_PASS );
 
-        Utilisateur utilisateur = new Utilisateur();
+
+
+        UtilisateurEntity utilisateur = new UtilisateurEntity();
+
 
         /* Validation du champ email. */
         try {
@@ -36,7 +39,7 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_EMAIL, e.getMessage() );
         }
-        utilisateur.setEmail( email );
+
 
         /* Validation du champ mot de passe. */
         try {
@@ -44,14 +47,15 @@ public final class ConnexionForm {
         } catch ( Exception e ) {
             setErreur( CHAMP_PASS, e.getMessage() );
         }
-        utilisateur.setMotDePasse( motDePasse );
+
 
         /* Initialisation du résultat global de la validation. */
-        if ( erreurs.isEmpty() && UtilisateurDAO.isValidLogin( email, motDePasse ) ) {
+        if (  erreurs.isEmpty() && UtilisateurDAO.isValidLogin( email, motDePasse ) ) {
             resultat = "Succès de la connexion.";
             System.out.println( utilisateur );
         } else {
             resultat = "Échec de la connexion.";
+            setErreur( CHAMP_PASS, "mauvais mot de passe" );
         }
 
         return utilisateur;

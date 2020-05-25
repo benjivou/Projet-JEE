@@ -92,9 +92,9 @@
                     <label for="nom" class="col">Nom:</label>
                     <input type="text" class="form-control mot de passe" id="nom" placeholder="Nom..." name="nom" >
                 </div>
-
-                    <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-2">Login</button>
-
+                    <div class="container text-center">
+                        <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Je valide</button>
+                    </div>
 
             </form>
             <!-- Form end -->

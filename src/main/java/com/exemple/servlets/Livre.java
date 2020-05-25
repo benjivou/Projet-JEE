@@ -10,7 +10,7 @@ import java.io.IOException;
 @WebServlet(urlPatterns = "/livre")
 public class Livre extends HttpServlet {
     public static final String ATT_USER = "utilisateur";
-    public static final String ATT_FORM = "form";
+
     public static final String VUE      = "/WEB-INF/livre.jsp";
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {

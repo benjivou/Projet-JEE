@@ -1,6 +1,7 @@
 package com.exemple.servlets;
 
 import java.io.IOException;
+import java.util.logging.Logger;
 
 import javax.jws.WebService;
 import javax.servlet.ServletException;
@@ -12,8 +13,8 @@ import javax.servlet.http.HttpSession;
 
 import com.exemple.bdd.DAOContext;
 
-import com.exemple.bdd.UtilisateurORM;
-import com.exemple.beans.Utilisateur;
+
+import com.exemple.bdd.UtilisateurEntity;
 import com.exemple.forms.ConnexionForm;
 
 @WebServlet(urlPatterns = {"/connexion"})
@@ -38,7 +39,8 @@ public class Connexion extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
-
+        Logger logger = Logger.getLogger(this.getClass().getName());
+        logger.info("on est dans le post de Connexion");
 
         /*
         Step 1 : Inscription
@@ -48,7 +50,7 @@ public class Connexion extends HttpServlet {
         ConnexionForm form = new ConnexionForm();
 
         /* Traitement de la requête et récupération du bean en résultant */
-        Utilisateur utilisateur = form.connecterUtilisateur( request );
+        UtilisateurEntity utilisateur = form.connecterUtilisateur( request );
 
         /* Récupération de la session depuis la requête */
         HttpSession session = request.getSession();
@@ -70,7 +72,7 @@ public class Connexion extends HttpServlet {
          */
         if(form.getErreurs().isEmpty()  ){
             // redirection vers la page table
-            response.sendRedirect(request.getContextPath()+"/table"); // Redirection vers la bonne page
+            response.sendRedirect(request.getContextPath()+"/livre"); // Redirection vers la bonne page
 
         }
         else{

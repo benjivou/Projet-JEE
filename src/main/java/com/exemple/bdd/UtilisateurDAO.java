@@ -25,7 +25,7 @@ public class UtilisateurDAO extends DAOContext {
                 statement.setString( 1, login );
                 statement.setString( 2, password );
                 try ( ResultSet resultSet = statement.executeQuery() ) {
-                    if ( resultSet.next() && resultSet.getString(2).equals(login)) {
+                    if ( resultSet.next()) {
 
                         return true;
                     } else {

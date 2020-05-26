@@ -75,13 +75,25 @@
 <div class=" main container ">
 
     <div class="form-group align-items-center text-center">
-        <form class="form-example" action="connexion" method="post" >
+        <form class="form-example"
+              action="livre"
+              method="post" >
 
-        <label for="exampleFormControlTextarea1"><h1 for="exampleFormControlTextarea1">Laisser votre message sur notre livre d'or ${utilisateur.nom} !</h1>
-        </label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" ></textarea>
+            <label for="content" class="requis">
+                <h1 for="content">Laisser votre message sur notre livre d'or ${utilisateur.nom} !</h1></label>
+                <input type="text"
+                       class="form-control password"
+                       id="content"
+                       placeholder="mot de passe..."
+                       name="content"
+                       />
 
-        <button type="submit" class="btn btn-primary btn-block btn-radius">Je laisse mon message </button>
+
+            <button type="submit" value="avis" class="btn btn-primary btn-block btn-radius">
+
+                Je laisse mon message
+            </button>
+
         </form>
     </div>
 

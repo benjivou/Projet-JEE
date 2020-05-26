@@ -87,12 +87,12 @@
                 </div>
                 <div class="form-group form-inline">
                     <label for="mot de passe" class="col">Copie mot de passe:</label>
-                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                    <input type="mot_de_passe" class="form-control " id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
                     <span class="erreur col">${form.erreurs['verif']}</span>
                 </div>
                 <div class="form-group form-inline">
                     <label for="nom" class="col">Nom:</label>
-                    <input type="text" class="form-control mot de passe" id="nom" placeholder="Nom..." name="nom" >
+                    <input type="text" class="form-control " id="nom" placeholder="Nom..." name="nom" >
                     <span class="erreur col">${form.erreurs['nom']}</span>
                 </div>
                     <div class="container text-center">

@@ -1,6 +1,7 @@
 package com.exemple.servlets;
 
 import com.exemple.bdd.entity.UtilisateurEntity;
+import com.exemple.forms.CommentaireForm;
 import com.exemple.servlets.abstrct.AuthentificationAbstract;
 
 import javax.servlet.ServletException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import static com.exemple.forms.CommentaireForm.envoyerCommentaire;
 import static com.exemple.servlets.Connexion.ATT_USER;
 
 @WebServlet(urlPatterns = "/livre")
@@ -26,11 +28,14 @@ public class Livre extends AuthentificationAbstract {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         super.doGet(request,response);
+        Logger logger = Logger.getLogger(this.getClass().getName());
+        logger.warning("on est dans le get de Livre ");
+
         if(this.utilisateur == null) {
             response.sendRedirect(request.getContextPath() + "/connexion");
         }else{
             /* Affichage de la page du livre*/
-
+            request.setAttribute( ATT_USER,this.utilisateur);
             this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
         }
 
@@ -38,13 +43,19 @@ public class Livre extends AuthentificationAbstract {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-        Logger logger = Logger.getLogger(this.getClass().getName());
-        logger.warning("on est dans le get de Livre ");
 
-        logger.warning("la valeur de l'attribut user session est :  "+ ((UtilisateurEntity)request.getSession().getAttribute(ATT_SESSION_USER)).getEmail());
-        request.setAttribute( ATT_USER,(UtilisateurEntity) request.getSession().getAttribute(ATT_SESSION_USER));
-        /* Affichage de la page d'inscription */
-        this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
+        Logger logger = Logger.getLogger(this.getClass().getName());
+        logger.warning("on est dans le post de Livre ");
+        logger.warning(request.getParameter( "nomChamp" ));
+        /**
+         * send the message to the database
+         */
+        envoyerCommentaire(request,this.utilisateur);
+
+
+
+        /* retour à la page d'accueil */
+        response.sendRedirect(request.getContextPath()+"/accueil"   );
 
     }
 }

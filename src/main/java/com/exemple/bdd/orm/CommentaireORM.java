@@ -15,8 +15,8 @@ import java.util.List;
 
 
 public class CommentaireORM {
-    private static void createAndStoreEvent(String contenu, UtilisateurEntity utilisateurEntity) {
-        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+    public static CommentaireEntity createAndStoreEvent(String contenu, UtilisateurEntity utilisateurEntity) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
 
         CommentaireEntity com = new CommentaireEntity();
@@ -30,6 +30,8 @@ public class CommentaireORM {
         session.save(com);
 
         session.getTransaction().commit();
+
+        return com;
     }
 
 

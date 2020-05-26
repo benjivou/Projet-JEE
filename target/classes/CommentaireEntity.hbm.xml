@@ -4,4 +4,21 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
+    <class name="com.exemple.bdd.entity.CommentaireEntity" table="commentaire" schema="cours_jee_exemple2">
+        <id name="idCommentaire">
+            <column name="id_commentaire" sql-type="int(11)"/>
+        </id>
+        <property name="content">
+            <column name="content" sql-type="text"/>
+        </property>
+        <property name="date">
+            <column name="date" sql-type="date"/>
+        </property>
+        <property name="idUtilisateur">
+            <column name="id_utilisateur" sql-type="int(11)"/>
+        </property>
+        <property name="likes">
+            <column name="Likes" sql-type="int(11) unsigned"/>
+        </property>
+    </class>
 </hibernate-mapping>

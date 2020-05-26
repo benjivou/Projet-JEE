@@ -81,19 +81,24 @@
                     <span class="erreur col">${form.erreurs['email']}</span>
                 </div>
                 <div class="form-group form-inline">
-                    <label for="mot de passe" class="col">Mot de passe:</label>
-                    <input type="mot_de_passe" class="form-control mot de passe" id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
+                    <label for="motdepasse" class="col">Mot de passe:</label>
+                    <input type="password" class="form-control mot de passe" id="motdepasse" placeholder="mot de passe..." name="motdepasse" >
                     <span class="erreur col">${form.erreurs['motdepasse']}</span>
                 </div>
                 <div class="form-group form-inline">
-                    <label for="mot de passe" class="col">Copie mot de passe:</label>
-                    <input type="mot_de_passe" class="form-control " id="mot_de_passe" placeholder="mot de passe..." name="mot de passe" >
-                    <span class="erreur col">${form.erreurs['verif']}</span>
+                    <label for="confirmation" class="col">Copie mot de passe:</label>
+                    <input type="password" class="form-control " id="confirmation" placeholder="mot de passe..." name="confirmation" >
+                    <span class="erreur col">${form.erreurs['confirmation']}</span>
                 </div>
                 <div class="form-group form-inline">
                     <label for="nom" class="col">Nom:</label>
                     <input type="text" class="form-control " id="nom" placeholder="Nom..." name="nom" >
                     <span class="erreur col">${form.erreurs['nom']}</span>
+                </div>
+                <div class="form-group form-inline">
+                    <label for="prenom" class="col">Prenom:</label>
+                    <input type="text" class="form-control " id="prenom" placeholder="Prenom..." name="prenom" >
+                    <span class="erreur col">${form.erreurs['prenom']}</span>
                 </div>
                     <div class="container text-center">
                         <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Je valide</button>

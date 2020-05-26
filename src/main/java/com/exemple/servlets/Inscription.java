@@ -47,7 +47,7 @@ public class Inscription extends HttpServlet {
             request.setAttribute( ATT_USER, utilisateur );
 
             /* Redirection sur la page de connexion */
-            response.sendRedirect(request.getContextPath()+"/connexion"); // Redirection vers la bonne page
+            response.sendRedirect(request.getContextPath()+"/accueil"); // Redirection vers la bonne page
 
         }
         catch(SQLException e){

@@ -35,7 +35,7 @@
       <configuration>
         <setting name="validation-enabled" value="true" />
         <datasource-mapping>
-          <factory-entry name="V2" />
+          <factory-entry name="V2" value="23039fcf-3d3e-4977-9867-a48c39a3cea0" />
         </datasource-mapping>
         <naming-strategy-map />
       </configuration>

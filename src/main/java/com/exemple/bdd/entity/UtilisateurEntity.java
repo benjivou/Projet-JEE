@@ -12,6 +12,7 @@ public class UtilisateurEntity {
     private String nom;
     private Timestamp dateInscription;
     private String prenom;
+    private int likes;
 
     @Id
     @Column(name = "id_utilisateur", nullable = false)
@@ -100,5 +101,16 @@ public class UtilisateurEntity {
         result = 31 * result + (dateInscription != null ? dateInscription.hashCode() : 0);
         result = 31 * result + (prenom != null ? prenom.hashCode() : 0);
         return result;
+    }
+
+    @Basic
+    @Column(name = "likes", nullable = false)
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+
+        this.likes = likes;
     }
 }

@@ -10,6 +10,7 @@ public class CommentaireEntity {
     private String content;
     private Date date;
     private int idUtilisateur;
+    private int likes;
 
     @Id
     @Column(name = "id_commentaire", nullable = false)
@@ -73,5 +74,15 @@ public class CommentaireEntity {
         result = 31 * result + (date != null ? date.hashCode() : 0);
         result = 31 * result + idUtilisateur;
         return result;
+    }
+
+    @Basic
+    @Column(name = "Likes", nullable = false)
+    public int getLikes() {
+        return likes;
+    }
+
+    public void setLikes(int likes) {
+        this.likes = likes;
     }
 }

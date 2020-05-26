@@ -79,14 +79,14 @@
               action="livre"
               method="post" >
 
-            <label for="content" class="requis">
-                <h1 for="content">Laisser votre message sur notre livre d'or ${utilisateur.nom} !</h1></label>
-                <input type="text"
-                       class="form-control password"
+            <label for="content" class="requis ">
+                <h1 for="content ">Laisser votre message sur notre livre d'or ${utilisateur.nom} !</h1></label>
+                <textarea type="text"
+                       class="form-control  password"
                        id="content"
                        placeholder="Votre souvenir ..."
                        name="content"
-                       />
+                ></textarea>
 
 
             <button type="submit" value="avis" class="btn btn-primary btn-block btn-radius">

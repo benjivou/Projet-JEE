@@ -10,7 +10,9 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import javax.persistence.Query;
 import java.sql.Date;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -34,6 +36,30 @@ public class CommentaireORM {
         return com;
     }
 
+    /**
+     * donne les tops commentaires
+     * @param nbTops nombre de commentaires voulus
+     * @return retourne les nbTops tops commentaires
+     */
+    public static ArrayList<CommentaireEntity> getTopCommentaires(int nbTops){
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        List commentaires = null;
+        try {
+
+
+            commentaires = session.createQuery(
+                    "from CommentaireEntity ORDER BY likes "
+            )
+                    .setMaxResults(nbTops)
+                    .getResultList();
+
+        } finally {
+            session.close();
+
+        }
+
+        return (ArrayList<CommentaireEntity>) commentaires;
+    }
 
 
     public static List<CommentaireEntity> getAllCommentaires() throws Exception {

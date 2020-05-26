@@ -89,6 +89,25 @@
         <br>
         Le club Pandatech n'attends plus que vous...</p>
 
+        <header>Notre tops 3 des commentaires les plus likés</header>
+        <div class="row ">
+            <c:forEach items="${topcommentaire}" var="i" varStatus = "status">
+            <div class="col-3">
+
+                    <div class="card">
+                        <div class="card-body">
+
+                            <p class="card-text">${i.content}</p>
+
+
+                        </div>
+                    </div>
+
+            </div>
+            </c:forEach>
+        </div>
+
+    </div>
 </main>
 
 

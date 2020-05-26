@@ -74,7 +74,37 @@
 
 <div class=" main container ">
 
+    <h1>Notre tops 3 commentaires :</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <form action="message"
+                      method="post">
+                    <div class="card">
+                        <div class="card-body">
+
+                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                            <div class="align-content-center text-center">
+                            <input href="submit" class="btn btn-primary " value="like" placeholder="like"/>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
     <h1>Nos commentaires :</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
 
 </div>
 

@@ -33,6 +33,7 @@ public class CommentaireORM {
 
         session.getTransaction().commit();
 
+        session.close();
         return com;
     }
 
@@ -48,7 +49,7 @@ public class CommentaireORM {
 
 
             commentaires = session.createQuery(
-                    "from CommentaireEntity ORDER BY likes "
+                    "from CommentaireEntity ORDER BY likes DESC "
             )
                     .setMaxResults(nbTops)
                     .getResultList();

@@ -1,4 +1,4 @@
-package com.exemple.servlets;
+package com.exemple.servlets.publicpage;
 
 
 import com.exemple.bdd.dao.DAOContext;

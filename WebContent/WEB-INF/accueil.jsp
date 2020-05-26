@@ -98,7 +98,7 @@
                         <div class="card-body">
 
                             <p class="card-text">${i.content}</p>
-
+                            <p class="card-footer text-muted"> Like : ${i.likes} </p>
 
                         </div>
                     </div>

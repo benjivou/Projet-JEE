@@ -9,8 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
-import static com.exemple.servlets.Connexion.ATT_USER;
-
 /**
  * Page with authentification check
  */
@@ -46,7 +44,7 @@ public class AuthentificationAbstract extends HttpServlet {
 
             // after the connection process we will
             // go back to this page
-            request.getSession().setAttribute(ATT_SESSION_BEFORE,pagePrec);
+            request.getSession().setAttribute(ATT_SESSION_BEFORE,this.pagePrec);
 
 
 

@@ -1,7 +1,5 @@
-package com.exemple.servlets;
+package com.exemple.servlets.authentificationpage;
 
-import com.exemple.bdd.entity.UtilisateurEntity;
-import com.exemple.forms.CommentaireForm;
 import com.exemple.servlets.abstrct.AuthentificationAbstract;
 
 import javax.servlet.ServletException;
@@ -12,7 +10,7 @@ import java.io.IOException;
 import java.util.logging.Logger;
 
 import static com.exemple.forms.CommentaireForm.envoyerCommentaire;
-import static com.exemple.servlets.Connexion.ATT_USER;
+import static com.exemple.servlets.publicpage.Connexion.ATT_USER;
 
 @WebServlet(urlPatterns = "/livre")
 public class Livre extends AuthentificationAbstract {
@@ -30,7 +28,9 @@ public class Livre extends AuthentificationAbstract {
         super.doGet(request,response);
         Logger logger = Logger.getLogger(this.getClass().getName());
         logger.warning("on est dans le get de Livre ");
-
+        /*
+        Affichage de la page de connexion
+         */
         if(this.utilisateur == null) {
             response.sendRedirect(request.getContextPath() + "/connexion");
         }else{

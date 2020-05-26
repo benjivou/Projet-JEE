@@ -1,4 +1,4 @@
-package com.exemple.servlets;
+package com.exemple.servlets.publicpage;
 
 import java.io.IOException;
 import java.util.ArrayList;

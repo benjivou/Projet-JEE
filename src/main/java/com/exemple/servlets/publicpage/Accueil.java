@@ -22,10 +22,7 @@ public class Accueil extends HttpServlet  {
 
     public static final String VUE              = "/WEB-INF/accueil.jsp";
 
-    @Override
-    public void init() throws ServletException {
-        DAOContext.init( this.getServletContext() );
-    }
+
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 

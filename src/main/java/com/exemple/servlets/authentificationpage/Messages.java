@@ -9,6 +9,7 @@ import com.exemple.servlets.abstrct.AuthentificationAbstract;
 import com.sun.org.apache.xpath.internal.operations.Bool;
 import javafx.util.Pair;
 
+import javax.security.auth.login.LoginException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,11 +36,11 @@ public class Messages extends AuthentificationAbstract {
     private ArrayList<Pair<CommentaireEntity, Boolean>> listCommentaire;// liste de tous les commentaires
     private ArrayList<Pair<CommentaireEntity,Boolean>> listTop;         // liste des tops commentaires en ce moment
 
+    private Logger console = Logger.getLogger(
+            this.getClass()
+                    .getName());
 
-    @Override
-    public void init() throws ServletException {
-        DAOContext.init( this.getServletContext() );
-    }
+
 
     public Messages(){
         super();
@@ -50,7 +51,7 @@ public class Messages extends AuthentificationAbstract {
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         super.doGet(request,response);
         /* Affichage de la page de connexion */
-        Logger logger = Logger.getLogger(this.getClass().getName());
+
         if(this.utilisateur == null) {
             response.sendRedirect(request.getContextPath() + "/connexion");
         }else{
@@ -59,15 +60,8 @@ public class Messages extends AuthentificationAbstract {
                 /*
                 Prepare la première liste
                  */
-
-                ArrayList<CommentaireEntity> list = (ArrayList<CommentaireEntity>) CommentaireORM.getAllCommentaires();
-
-//                for (CommentaireEntity com: list
-//                     ) {
-//                    logger.warning(com.getContent());
-//                }
                 this.listCommentaire = prepareListe(
-                    list
+                        (ArrayList<CommentaireEntity>) CommentaireORM.getAllCommentaires()
                 );
 
                 /*
@@ -77,12 +71,6 @@ public class Messages extends AuthentificationAbstract {
                         (ArrayList<CommentaireEntity>) CommentaireORM.getTopCommentaires(3)
                 );
 
-                for (Pair<CommentaireEntity,Boolean> com: this.listTop
-                ) {
-
-                    logger.warning(com.getKey().getContent());
-                }
-
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -91,7 +79,7 @@ public class Messages extends AuthentificationAbstract {
             /*
             Commmunique tous les traitements
              */
-            request.setAttribute(ATT_USER,this.utilisateur); // give the user to the front end
+            request.setAttribute( ATT_USER,this.utilisateur); // give the user to the front end
             request.setAttribute(ATT_TOP,this.listTop);
             request.setAttribute(ATT_LIST,this.listCommentaire);
 
@@ -114,6 +102,8 @@ public class Messages extends AuthentificationAbstract {
          */
          String idCommentaire =  getValeurChamp(request,ATT_ID_LIST);
 
+         console.warning("l'id du commentaire est : " + idCommentaire);
+
          CommentaireEntity com = null;
 
          com = updateLikeabilite(Integer.parseInt(idCommentaire));
@@ -126,13 +116,13 @@ public class Messages extends AuthentificationAbstract {
          /*
             Commmunique tous les traitements
              */
-        request.setAttribute(ATT_USER,this.utilisateur); // give the user to the front end
+        request.setAttribute( ATT_USER,this.utilisateur); // give the user to the front end
         request.setAttribute(ATT_TOP,this.listTop);
         request.setAttribute(ATT_LIST,this.listCommentaire);
 
 
         /* Affichage de la page des messages*/
-        this.getServletContext()
+        request
                 .getRequestDispatcher( VUE )
                 .forward( request, response );
 

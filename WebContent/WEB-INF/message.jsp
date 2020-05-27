@@ -5,18 +5,21 @@
   Time: 12:23
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page pageEncoding="UTF-8" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+           prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Livre d'or</title>
+    <title>Message</title>
     <link type="text/css" rel="stylesheet" href="inc/form.css"/>
     <style>
         <%@ include file="../inc/form.css"%>
         <%@include file="../inc/bootstrap-4.5.0-dist/css/bootstrap.css" %>
 
     </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
             crossorigin="anonymous"></script>
@@ -77,37 +80,74 @@
     <h1>Notre tops 3 commentaires :</h1>
     <div class="row ">
         <c:forEach items="${topcommentaire}" var="i" varStatus = "status">
-            <c:forEach items="${i}" var="k" varStatus = "status">
-            <div class="row">
 
-                <div class="card">
-                    <div class="card-body">
 
-                        <p class="card-text">${k.key.content}</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                        <p class="card-footer text-muted"> Like : ${k.key.likes} </p>
+                <div class="card col">
+                    <div class="card-body text-center">
 
-                    </div>
+                            <p class="card-text col">${i.key.content}</p>
+
+
+                        <c:if test="${i.value == true}">
+                            <form action="message" method="post">
+                                <button
+
+                                        type="submit"
+                                        class="btn btn-primary btn-lg"
+                                        name="id"
+                                        value="${i.key.idCommentaire}"
+                                >
+                                    <span class="fa fa-thumbs-up fa-lg"></span>
+                                </button>
+                            </form>
+                        </c:if>
+
+
+                        </div>
+                    <p class="card-footer text-muted"> Like : ${i.key.likes} </p>
+
                 </div>
 
-            </div>
         </c:forEach>
 
 
     </div>
     <h1>Nos commentaires :</h1>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body">
+    <div class="row ">
+    <c:forEach items="${commentaire}" var="i" varStatus = "status">
 
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+
+        <div class="card col">
+            <div class="card-body text-center">
+
+                    <p class="card-text col">${i.key.content}</p>
+
+                    <c:if test="${i.value == true}">
+                        <form action="message" method="post">
+                            <button
+                                    
+                                    type="submit"
+                                    class="btn btn-primary btn-lg"
+                                    name="id"
+                                    value="${i.key.idCommentaire}"
+                            >
+                                <span class="fa fa-thumbs-up fa-lg"></span>
+                            </button>
+                        </form>
+                    </c:if>
+
+
+
+
             </div>
+            <p class="card-footer text-muted"> Like : ${i.key.likes} </p>
+
         </div>
 
-    </div>
+    </c:forEach>
+
+
+</div>
 
 </div>
 

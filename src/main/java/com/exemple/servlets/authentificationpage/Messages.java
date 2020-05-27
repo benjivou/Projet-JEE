@@ -95,7 +95,7 @@ public class Messages extends AuthentificationAbstract {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
-        super.doPost(request, response);
+
 
         /*
         Récupération de la position du like suivant les listes
@@ -122,7 +122,7 @@ public class Messages extends AuthentificationAbstract {
 
 
         /* Affichage de la page des messages*/
-        request
+        this.getServletContext()
                 .getRequestDispatcher( VUE )
                 .forward( request, response );
 
@@ -189,7 +189,7 @@ public class Messages extends AuthentificationAbstract {
             }
             count ++;
         }
-
+        count = 0;
         for (Pair<CommentaireEntity,Boolean> pair:
                 this.listTop
         ) {

@@ -42,9 +42,7 @@ public class Inscription extends HttpServlet {
         UtilisateurEntity utilisateur = null;
         try {
              utilisateur = form.inscrireUtilisateur(request);
-            /* Stockage du formulaire et du bean dans l'objet request */
-            request.setAttribute( ATT_FORM, form );
-            request.setAttribute( ATT_USER, utilisateur );
+
 
             /* Redirection sur la page de connexion */
             response.sendRedirect(request.getContextPath()+"/accueil"); // Redirection vers la bonne page

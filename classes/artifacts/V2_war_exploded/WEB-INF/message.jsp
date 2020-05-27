@@ -125,7 +125,7 @@
                     <c:if test="${i.value == true}">
                         <form action="message" method="post">
                             <button
-                                    
+
                                     type="submit"
                                     class="btn btn-primary btn-lg"
                                     name="id"

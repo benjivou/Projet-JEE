@@ -10,7 +10,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-public class CommentaireForm {
+public class CommentaireForm extends FormAbstrsact{
+
+
     private static final String CHAMP_CONTENU  = "content";
     private String              resultat;
     private Map<String, String> erreurs     = new HashMap<String, String>();
@@ -34,16 +36,5 @@ public class CommentaireForm {
             return commentaireEntity;
     }
 
-    /*
-     * Méthode utilitaire qui retourne null si un champ est vide, et son contenu
-     * sinon.
-     */
-    private static String getValeurChamp( HttpServletRequest request, String nomChamp ) {
-        String valeur = request.getParameter( nomChamp );
-        if ( valeur == null || valeur.trim().length() == 0 ) {
-            return null;
-        } else {
-            return valeur.trim();
-        }
-    }
+
 }

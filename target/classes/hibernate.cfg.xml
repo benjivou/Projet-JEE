@@ -17,4 +17,5 @@
         <mapping resource="UtilisateurEntity.hbm.xml"/>
         <mapping class="com.exemple.bdd.entity.UtilisateurEntity"/>
     </session-factory>
+
 </hibernate-configuration>

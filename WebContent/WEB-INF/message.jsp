@@ -75,36 +75,38 @@
 <div class=" main container ">
 
     <h1>Notre tops 3 commentaires :</h1>
-        <div class="row">
-            <div class="col-sm-6">
-                <form action="message"
-                      method="post">
-                    <div class="card">
-                        <div class="card-body">
+    <div class="row ">
+        <c:forEach items="${topcommentaire}" var="i" varStatus = "status">
+            <div class="row">
 
-                            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                            <div class="align-content-center text-center">
-                            <input href="submit" class="btn btn-primary " value="like" placeholder="like"/>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-
-        </div>
-    <h1>Nos commentaires :</h1>
-        <div class="row">
-            <div class="col-sm-6">
                 <div class="card">
                     <div class="card-body">
 
-                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <p class="card-text">${i.key.content}</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <p class="card-footer text-muted"> Like : ${i.key.likes} </p>
+
                     </div>
                 </div>
-            </div>
 
+            </div>
+        </c:forEach>
+
+
+    </div>
+    <h1>Nos commentaires :</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
         </div>
+
+    </div>
 
 </div>
 

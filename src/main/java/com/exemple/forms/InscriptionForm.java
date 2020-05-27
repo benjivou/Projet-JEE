@@ -11,7 +11,7 @@ import com.exemple.bdd.dao.UtilisateurDAO;
 import com.exemple.bdd.entity.UtilisateurEntity;
 import com.exemple.bdd.orm.UtilisateurORM;
 
-public final class InscriptionForm {
+public final class InscriptionForm extends FormAbstrsact{
     private static final String CHAMP_EMAIL = "email";
     private static final String CHAMP_PASS  = "motdepasse";
     private static final String CHAMP_CONF  = "confirmation";
@@ -123,17 +123,6 @@ public final class InscriptionForm {
         erreurs.put( champ, message );
     }
 
-    /*
-     * Méthode utilitaire qui retourne null si un champ est vide, et son contenu
-     * sinon.
-     */
-    private static String getValeurChamp( HttpServletRequest request, String nomChamp ) {
-        String valeur = request.getParameter( nomChamp );
-        if ( valeur == null || valeur.trim().length() == 0 ) {
-            return null;
-        } else {
-            return valeur.trim();
-        }
-    }
+
 
 }

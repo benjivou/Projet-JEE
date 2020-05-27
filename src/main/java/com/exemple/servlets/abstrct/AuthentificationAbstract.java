@@ -29,7 +29,7 @@ public class AuthentificationAbstract extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,
             IOException {
         Logger logger = Logger.getLogger(this.getClass().getName());
-        logger.warning("on est dans le get de Livre ");
+
 
         /*
         Message part

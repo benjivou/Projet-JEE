@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Hibernate 5.4.11-5.4.11">
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/antlr-2.7.7.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/dom4j-2.1.1.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/FastInfoset-1.2.15.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/hibernate-commons-annotations-5.1.0.Final.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/jandex-2.1.1.Final.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.activation-api-1.2.0.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javassist-3.24.0-GA.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.persistence-api-2.2.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/jboss-logging-3.3.2.Final.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/hibernate-core-5.4.11.Final.jar" />
+  </library>
+  <library name="Java EE 6-Java EE 6">
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.persistence.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.jms.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.ejb.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.annotation.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.resource.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.transaction.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.servlet.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.servlet.jsp.jar" />
+    <archive path="E:/Document/SourceTree/JEE/Projet-JEE/lib/javax.servlet.jsp.jstl.jar" />
+  </library>
+  <library name="Maven: antlr:antlr:2.7.7">
+    <archive path="C:/Users/benji/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar" />
+  </library>
+  <library name="Maven: com.fasterxml:classmate:1.5.1">
+    <archive path="C:/Users/benji/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar" />
+  </library>
+  <library name="Maven: com.google.protobuf:protobuf-java:3.6.1">
+    <archive path="C:/Users/benji/.m2/repository/com/google/protobuf/protobuf-java/3.6.1/protobuf-java-3.6.1.jar" />
+  </library>
+  <library name="Maven: com.sun.istack:istack-commons-runtime:3.0.7">
+    <archive path="C:/Users/benji/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar" />
+  </library>
+  <library name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15">
+    <archive path="C:/Users/benji/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar" />
+  </library>
+  <library name="Maven: javax.activation:javax.activation-api:1.2.0">
+    <archive path="C:/Users/benji/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar" />
+  </library>
+  <library name="Maven: javax.persistence:javax.persistence-api:2.2">
+    <archive path="C:/Users/benji/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar" />
+  </library>
+  <library name="Maven: javax.servlet:javax.servlet-api:3.1.0">
+    <archive path="C:/Users/benji/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" />
+  </library>
+  <library name="Maven: javax.servlet.jsp:jsp-api:2.2">
+    <archive path="C:/Users/benji/.m2/repository/javax/servlet/jsp/jsp-api/2.2/jsp-api-2.2.jar" />
+  </library>
+  <library name="Maven: javax.servlet.jsp.jstl:jstl-api:1.2">
+    <archive path="C:/Users/benji/.m2/repository/javax/servlet/jsp/jstl/jstl-api/1.2/jstl-api-1.2.jar" />
+  </library>
+  <library name="Maven: javax.servlet:servlet-api:2.5">
+    <archive path="C:/Users/benji/.m2/repository/javax/servlet/servlet-api/2.5/servlet-api-2.5.jar" />
+  </library>
+  <library name="Maven: javax.xml.bind:jaxb-api:2.3.1">
+    <archive path="C:/Users/benji/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar" />
+  </library>
+  <library name="Maven: mysql:mysql-connector-java:8.0.13">
+    <archive path="C:/Users/benji/.m2/repository/mysql/mysql-connector-java/8.0.13/mysql-connector-java-8.0.13.jar" />
+  </library>
+  <library name="Maven: net.bytebuddy:byte-buddy:1.10.10">
+    <archive path="C:/Users/benji/.m2/repository/net/bytebuddy/byte-buddy/1.10.10/byte-buddy-1.10.10.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat:tomcat-el-api:7.0.103">
+    <archive path="C:/Users/benji/.m2/repository/org/apache/tomcat/tomcat-el-api/7.0.103/tomcat-el-api-7.0.103.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat:tomcat-jsp-api:7.0.103">
+    <archive path="C:/Users/benji/.m2/repository/org/apache/tomcat/tomcat-jsp-api/7.0.103/tomcat-jsp-api-7.0.103.jar" />
+  </library>
+  <library name="Maven: org.apache.tomcat:tomcat-servlet-api:7.0.103">
+    <archive path="C:/Users/benji/.m2/repository/org/apache/tomcat/tomcat-servlet-api/7.0.103/tomcat-servlet-api-7.0.103.jar" />
+  </library>
+  <library name="Maven: org.dom4j:dom4j:2.1.3">
+    <archive path="C:/Users/benji/.m2/repository/org/dom4j/dom4j/2.1.3/dom4j-2.1.3.jar" />
+  </library>
+  <library name="Maven: org.glassfish.jaxb:jaxb-runtime:2.3.1">
+    <archive path="C:/Users/benji/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar" />
+  </library>
+  <library name="Maven: org.glassfish.jaxb:txw2:2.3.1">
+    <archive path="C:/Users/benji/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar" />
+  </library>
+  <library name="Maven: org.hibernate.common:hibernate-commons-annotations:5.1.0.Final">
+    <archive path="C:/Users/benji/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar" />
+  </library>
+  <library name="Maven: org.hibernate:hibernate-core:5.4.15.Final">
+    <archive path="C:/Users/benji/.m2/repository/org/hibernate/hibernate-core/5.4.15.Final/hibernate-core-5.4.15.Final.jar" />
+  </library>
+  <library name="Maven: org.javassist:javassist:3.24.0-GA">
+    <archive path="C:/Users/benji/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar" />
+  </library>
+  <library name="Maven: org.jboss:jandex:2.1.3.Final">
+    <archive path="C:/Users/benji/.m2/repository/org/jboss/jandex/2.1.3.Final/jandex-2.1.3.Final.jar" />
+  </library>
+  <library name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final">
+    <archive path="C:/Users/benji/.m2/repository/org/jboss/logging/jboss-logging/3.3.2.Final/jboss-logging-3.3.2.Final.jar" />
+  </library>
+  <library name="Maven: org.jboss.spec.javax.transaction:jboss-transaction-api_1.2_spec:1.1.1.Final">
+    <archive path="C:/Users/benji/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" />
+  </library>
+  <library name="Maven: org.jvnet.staxex:stax-ex:1.8">
+    <archive path="C:/Users/benji/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar" />
+  </library>
+  <library name="jdk1.8" />
+  <library name="mysql-connector-java-5.1.49-bin" />
+</eclipse-userlibraries>
+

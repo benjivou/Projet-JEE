@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Logger;
 
 import static com.exemple.forms.FormAbstrsact.getValeurChamp;
 import static com.exemple.servlets.publicpage.Connexion.ATT_USER;
@@ -49,7 +50,7 @@ public class Messages extends AuthentificationAbstract {
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
         super.doGet(request,response);
         /* Affichage de la page de connexion */
-
+        Logger logger = Logger.getLogger(this.getClass().getName());
         if(this.utilisateur == null) {
             response.sendRedirect(request.getContextPath() + "/connexion");
         }else{
@@ -58,8 +59,15 @@ public class Messages extends AuthentificationAbstract {
                 /*
                 Prepare la première liste
                  */
+
+                ArrayList<CommentaireEntity> list = (ArrayList<CommentaireEntity>) CommentaireORM.getAllCommentaires();
+
+//                for (CommentaireEntity com: list
+//                     ) {
+//                    logger.warning(com.getContent());
+//                }
                 this.listCommentaire = prepareListe(
-                        (ArrayList<CommentaireEntity>) CommentaireORM.getAllCommentaires()
+                    list
                 );
 
                 /*
@@ -69,6 +77,12 @@ public class Messages extends AuthentificationAbstract {
                         (ArrayList<CommentaireEntity>) CommentaireORM.getTopCommentaires(3)
                 );
 
+                for (Pair<CommentaireEntity,Boolean> com: this.listTop
+                ) {
+
+                    logger.warning(com.getKey().getContent());
+                }
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -77,7 +91,7 @@ public class Messages extends AuthentificationAbstract {
             /*
             Commmunique tous les traitements
              */
-            request.setAttribute( ATT_USER,this.utilisateur); // give the user to the front end
+            request.setAttribute(ATT_USER,this.utilisateur); // give the user to the front end
             request.setAttribute(ATT_TOP,this.listTop);
             request.setAttribute(ATT_LIST,this.listCommentaire);
 
@@ -112,7 +126,7 @@ public class Messages extends AuthentificationAbstract {
          /*
             Commmunique tous les traitements
              */
-        request.setAttribute( ATT_USER,this.utilisateur); // give the user to the front end
+        request.setAttribute(ATT_USER,this.utilisateur); // give the user to the front end
         request.setAttribute(ATT_TOP,this.listTop);
         request.setAttribute(ATT_LIST,this.listCommentaire);
 

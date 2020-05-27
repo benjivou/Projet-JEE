@@ -77,14 +77,15 @@
     <h1>Notre tops 3 commentaires :</h1>
     <div class="row ">
         <c:forEach items="${topcommentaire}" var="i" varStatus = "status">
+            <c:forEach items="${i}" var="k" varStatus = "status">
             <div class="row">
 
                 <div class="card">
                     <div class="card-body">
 
-                        <p class="card-text">${i.key.content}</p>
+                        <p class="card-text">${k.key.content}</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
-                        <p class="card-footer text-muted"> Like : ${i.key.likes} </p>
+                        <p class="card-footer text-muted"> Like : ${k.key.likes} </p>
 
                     </div>
                 </div>

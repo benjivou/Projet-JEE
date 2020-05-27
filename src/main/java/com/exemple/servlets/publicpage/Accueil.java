@@ -28,6 +28,7 @@ public class Accueil extends HttpServlet  {
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+
         Logger logger = Logger.getLogger(this.getClass().getName());
         ArrayList<CommentaireEntity> list = CommentaireORM.getTopCommentaires(3);
 

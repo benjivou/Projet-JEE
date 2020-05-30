@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("deconnexion")
+@WebServlet(urlPatterns = "deconnexion")
 public class Deconnexion extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 

@@ -85,13 +85,12 @@
                 <div class="card col">
                     <div class="card-body text-center">
 
-                            <p class="card-text col">${i.key.content}</p>
+                            <p class="card-text ">${i.key.content}</p>
 
 
                         <c:if test="${i.value == true}">
                             <form action="message" method="post">
                                 <button
-
                                         type="submit"
                                         class="btn btn-primary btn-lg"
                                         name="id"
@@ -117,10 +116,10 @@
     <c:forEach items="${commentaire}" var="i" varStatus = "status">
 
 
-        <div class="card col">
+        <div class="card col-lg-4">
             <div class="card-body text-center">
 
-                    <p class="card-text col">${i.key.content}</p>
+                    <p class="card-text ">${i.key.content}</p>
 
                     <c:if test="${i.value == true}">
                         <form action="message" method="post">

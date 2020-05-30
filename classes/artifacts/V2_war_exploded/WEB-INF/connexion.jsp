@@ -3,7 +3,7 @@
            prefix="c" %>
 <!DOCTYPE html>
 <html>
-<head>
+    <head>
     <meta charset="utf-8"/>
     <title>Connexion</title>
     <style>
@@ -18,7 +18,7 @@
         <%@ include file="../inc/bootstrap-4.5.0-dist/js/bootstrap.js"%>
     </script>
 </head>
-<body>
+    <body>
     <div class=" main container ">
         <div class="row h-100 justify-content-center align-items-center">
             <div class="col-10 col-md-8 col-lg-6">

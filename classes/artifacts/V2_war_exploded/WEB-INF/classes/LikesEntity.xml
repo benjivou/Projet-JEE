@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.exemple.bdd.entity.LikesEntity">
+        <table name="likes" schema="cours_jee_exemple2" catalog=""/>
+        <attributes>
+            <id name="idLike">
+                <column name="idLike" precision="11"/>
+            </id>
+            <basic name="idUtilisateur">
+                <column name="idUtilisateur" precision="11"/>
+            </basic>
+            <basic name="idCommentaire">
+                <column name="idCommentaire" precision="11"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

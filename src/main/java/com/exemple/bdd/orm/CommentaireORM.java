@@ -2,8 +2,7 @@ package com.exemple.bdd.orm;
 
 
 
-
-
+import com.exemple.bdd.orm.HibernateUtil;
 import com.exemple.bdd.entity.CommentaireEntity;
 import com.exemple.bdd.entity.UtilisateurEntity;
 import org.hibernate.Session;

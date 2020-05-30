@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.exemple.bdd.entity.UtilisateurEntity">
+        <table name="utilisateur" schema="cours_jee_exemple2" catalog=""/>
+        <attributes>
+            <id name="idUtilisateur">
+                <column name="id_utilisateur" precision="11"/>
+            </id>
+            <basic name="email">
+                <column name="email" length="60"/>
+            </basic>
+            <basic name="motDePasse">
+                <column name="mot_de_passe" length="32"/>
+            </basic>
+            <basic name="nom">
+                <column name="nom" length="20"/>
+            </basic>
+            <basic name="dateInscription">
+                <column name="date_inscription" precision="-1"/>
+            </basic>
+            <basic name="prenom">
+                <column name="prenom" length="100"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

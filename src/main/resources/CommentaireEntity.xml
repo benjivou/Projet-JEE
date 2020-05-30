@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.exemple.bdd.entity.CommentaireEntity">
+        <table name="commentaire" schema="cours_jee_exemple2" catalog=""/>
+        <attributes>
+            <id name="idCommentaire">
+                <column name="id_commentaire" precision="11"/>
+            </id>
+            <basic name="content">
+                <column name="content"/>
+            </basic>
+            <basic name="date">
+                <column name="date" precision="-1"/>
+            </basic>
+            <basic name="idUtilisateur">
+                <column name="id_utilisateur" precision="11"/>
+            </basic>
+            <basic name="likes">
+                <column name="Likes" precision="11"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

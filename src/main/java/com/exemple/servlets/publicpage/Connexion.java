@@ -44,8 +44,11 @@ public class Connexion extends HttpServlet {
 
     public void doPost( HttpServletRequest request, HttpServletResponse response )
             throws ServletException, IOException {
+
         Logger logger = Logger.getLogger(this.getClass().getName());
         logger.info("on est dans le post de Connexion");
+
+
         try {
             ArrayList<UtilisateurEntity> com =
                     (ArrayList<UtilisateurEntity>) getAllUtilisateurs();

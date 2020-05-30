@@ -45,6 +45,8 @@ public class LikesORM {
         LikesEntity likesEntity = new LikesEntity();
         likesEntity.setIdCommentaire(commentaireEntity.getIdCommentaire());
         likesEntity.setIdUtilisateur(utilisateurEntity.getIdUtilisateur());
+
+
         session.update(commentaireEntity);
         session.save(likesEntity);
 

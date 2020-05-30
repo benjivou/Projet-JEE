@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.exemple.bdd.entity.UtilisateurEntity" %>
+<%@ page import="com.exemple.servlets.abstrct.AuthentificationAbstract" %><%--
   Created by IntelliJ IDEA.
   User: benji
   Date: 23/05/2020
@@ -68,7 +69,29 @@
                 <span class="item_text">Messages</span>
             </a>
         </div>
-
+        <%
+            UtilisateurEntity user = (UtilisateurEntity) session.getAttribute(AuthentificationAbstract.ATT_SESSION_USER);
+            if (user == null){
+                out.print("<div class=\"item_inner col\">\n" +
+                        "            <a href=\"connexion\">\n" +
+                        "                        <span class=\"menu_icon_wrapper\">\n" +
+                        "                            <i class=\"menu_icon blank fa\"></i>\n" +
+                        "                        </span>\n" +
+                        "                <span class=\"item_text\">Connexion</span>\n" +
+                        "            </a>\n" +
+                        "        </div>");
+            }
+            else{
+                out.print("<div class=\"item_inner col\">\n" +
+                        "            <a href=\"deconnexion\">\n" +
+                        "                        <span class=\"menu_icon_wrapper\">\n" +
+                        "                            <i class=\"menu_icon blank fa\"></i>\n" +
+                        "                        </span>\n" +
+                        "                <span class=\"item_text\">Deconnexion</span>\n" +
+                        "            </a>\n" +
+                        "        </div>");
+            }
+        %>
 
     </div>
 

@@ -52,6 +52,7 @@ public class Messages extends AuthentificationAbstract {
         super.doGet(request,response);
         /* Affichage de la page de connexion */
 
+
         if(this.utilisateur == null) {
             response.sendRedirect(request.getContextPath() + "/connexion");
         }else{

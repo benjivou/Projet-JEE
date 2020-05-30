@@ -1,3 +1,4 @@
+<%@ page import="com.exemple.bdd.entity.UtilisateurEntity" %>
 <%@ page pageEncoding="UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -61,7 +62,29 @@
             </a>
         </div>
 
-
+        <%
+            UtilisateurEntity user = (UtilisateurEntity) session.getAttribute(AuthentificationAbstract.ATT_SESSION_USER);
+            if (user == null){
+                out.print("<div class=\"item_inner col\">\n" +
+                        "            <a href=\"connexion\">\n" +
+                        "                        <span class=\"menu_icon_wrapper\">\n" +
+                        "                            <i class=\"menu_icon blank fa\"></i>\n" +
+                        "                        </span>\n" +
+                        "                <span class=\"item_text\">Connexion</span>\n" +
+                        "            </a>\n" +
+                        "        </div>");
+            }
+            else{
+                out.print("<div class=\"item_inner col\">\n" +
+                        "            <a href=\"deconnexion\">\n" +
+                        "                        <span class=\"menu_icon_wrapper\">\n" +
+                        "                            <i class=\"menu_icon blank fa\"></i>\n" +
+                        "                        </span>\n" +
+                        "                <span class=\"item_text\">Deconnexion</span>\n" +
+                        "            </a>\n" +
+                        "        </div>");
+            }
+        %>
     </div>
 
 
@@ -100,11 +123,11 @@
                     <input type="text" class="form-control " id="prenom" placeholder="Prenom..." name="prenom" >
                     <span class="erreur col">${form.erreurs['prenom']}</span>
                 </div>
-                    <div class="container text-center">
-                        <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Je valide</button>
-                    </div>
-
+                <div class="container text-center">
+                    <button type="submit" class=" btn btn-primary btn-radius btn-customized col-lg-4">Je valide</button>
+                </div>
             </form>
+
             <!-- Form end -->
         </div>
     </div>

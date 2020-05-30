@@ -91,8 +91,12 @@ public class Connexion extends HttpServlet {
             // redirection vers la page table
 
             //request.setAttribute( ATT_USER, utilisateur );
-
-            response.sendRedirect(request.getContextPath()+request.getSession().getAttribute(ATT_SESSION_BEFORE)   );
+            String page = (
+                    request.getSession().getAttribute(ATT_SESSION_BEFORE) == null
+            )? "/accueil" :
+            (String )request.getSession().getAttribute(ATT_SESSION_BEFORE)
+            ;
+            response.sendRedirect(request.getContextPath()+ page);
             // Redirection vers
             // la bonne
             // page

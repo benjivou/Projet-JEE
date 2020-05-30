@@ -14,6 +14,8 @@ import com.exemple.bdd.dao.DAOContext;
 import com.exemple.bdd.entity.UtilisateurEntity;
 import com.exemple.forms.InscriptionForm;
 
+import static com.exemple.servlets.publicpage.Connexion.ATT_USER;
+
 @WebServlet(urlPatterns = "/inscription")
 public class Inscription extends HttpServlet {
     public static final String ATT_USER = "utilisateur";
@@ -26,6 +28,7 @@ public class Inscription extends HttpServlet {
     }
 
     public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
+
         /* Affichage de la page d'inscription */
         this.getServletContext().getRequestDispatcher( VUE ).forward( request, response );
     }

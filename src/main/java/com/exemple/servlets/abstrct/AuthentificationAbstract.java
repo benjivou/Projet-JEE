@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.logging.Logger;
 
+import static com.exemple.servlets.publicpage.Inscription.ATT_USER;
+
 /**
  * Page with authentification check
  */
@@ -40,7 +42,7 @@ public class AuthentificationAbstract extends HttpServlet {
          * Test Utilisateur connecté ou non
          */
         // need to be connected
-        if((UtilisateurEntity) request.getSession().getAttribute(ATT_SESSION_USER) == null){
+        if((UtilisateurEntity) request.getSession().getAttribute(ATT_SESSION_USER) == null && this.utilisateur == null){
 
             // after the connection process we will
             // go back to this page
@@ -55,8 +57,9 @@ public class AuthentificationAbstract extends HttpServlet {
             // save the current user in the servlet
 
 
-            logger.warning("la valeur de l'attribut user session est :  "+ ((UtilisateurEntity)request.getSession().getAttribute(ATT_SESSION_USER)).getEmail());
+
             this.utilisateur = (UtilisateurEntity) request.getSession().getAttribute(ATT_SESSION_USER);
+            request.removeAttribute(ATT_USER);
         }
 
 

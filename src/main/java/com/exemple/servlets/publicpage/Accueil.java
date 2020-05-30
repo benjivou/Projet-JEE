@@ -14,6 +14,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Logger;
 
+import static com.exemple.servlets.publicpage.Connexion.ATT_USER;
+
 
 @WebServlet(urlPatterns = "/accueil")
 public class Accueil extends HttpServlet  {
@@ -25,7 +27,7 @@ public class Accueil extends HttpServlet  {
 
 
     public void doGet(HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
-
+        request.removeAttribute(ATT_USER);
         Logger logger = Logger.getLogger(this.getClass().getName());
         ArrayList<CommentaireEntity> list = CommentaireORM.getTopCommentaires(3);
 

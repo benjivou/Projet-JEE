@@ -122,6 +122,7 @@ public class Messages extends AuthentificationAbstract {
         request.setAttribute(ATT_LIST,this.listCommentaire);
 
 
+
         /* Affichage de la page des messages*/
         this.getServletContext()
                 .getRequestDispatcher( VUE )
@@ -206,6 +207,7 @@ public class Messages extends AuthentificationAbstract {
             }
             count ++;
         }
+
 
         return commentaireEntity;
     }

@@ -51,7 +51,7 @@ public class Livre extends AuthentificationAbstract {
          * send the message to the database
          */
         envoyerCommentaire(request,this.utilisateur);
-
+        this.utilisateur = null ;
 
 
         /* retour à la page d'accueil */

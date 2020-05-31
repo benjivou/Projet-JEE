@@ -198,6 +198,7 @@ public class Messages extends AuthentificationAbstract {
             /* Si l'on trouve le bon commentaire */
             if(pair.getKey().getIdCommentaire() == idCommentaire){
                 /* On modifie la list */
+                pair.getKey().setLikes(pair.getKey().getLikes()+1); // pour qe les 2 listes soit mises à jour
                 this.listTop.set(count,
                         new Pair<CommentaireEntity,Boolean>(
                                 pair.getKey(),

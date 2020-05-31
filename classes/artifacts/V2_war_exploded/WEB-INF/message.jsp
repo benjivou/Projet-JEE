@@ -82,7 +82,7 @@
                         "        </div>");
             }
             else{
-                out.print("<div class=\"item_inner col\">\n" +
+                out.print("<div class=\"item_inner col-2\">\n" +
                         "            <a href=\"deconnexion\">\n" +
                         "                        <span class=\"menu_icon_wrapper\">\n" +
                         "                            <i class=\"menu_icon blank fa\"></i>\n" +

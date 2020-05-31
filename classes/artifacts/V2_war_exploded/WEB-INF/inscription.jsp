@@ -62,7 +62,6 @@
                 <span class="item_text">Messages</span>
             </a>
         </div>
-
         <%
             UtilisateurEntity user = (UtilisateurEntity) session.getAttribute(AuthentificationAbstract.ATT_SESSION_USER);
             if (user == null){
